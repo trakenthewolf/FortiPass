@@ -393,23 +393,43 @@ body {
 }
 /* Estilo del cuadro de alerta */
 .alert {
-    padding: 10px;
-    background-color: #4CAF50; /* Verde */
+    padding: 10px 15px;
+    background-color: #4CAF50;
     color: white;
     position: fixed;
-    bottom: 28%; /* Posiciona el cuadro en la parte inferior */
-    left: 43%;  /* Mueve el cuadro hacia la derecha */
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 1000;
     border-radius: 5px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 250px; /* Ajusta el ancho del cuadro */
-    height: 50px; /* Ajusta la altura del cuadro */
-    text-align: center; /* Centra el texto dentro del cuadro */
-    transition: all 0.3s ease-in-out; /* Suaviza la transición al cambiar tamaño o posición */
+    justify-content: center;
+    width: auto;
+    max-width: 300px;
+    height: auto;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.5;
+    transition: all 0.3s ease-in-out;
 }
+
+@media (max-width: 768px) {
+    .alert {
+        bottom: 15%;
+        width: 90%;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .alert {
+        bottom: 10%;
+        font-size: 12px;
+    }
+}
+
 
 /* Estilo adaptado para pantallas más pequeñas (dispositivos móviles) */
 @media (max-width: 768px) {
