@@ -393,22 +393,44 @@ body {
 }
 /* Estilo del cuadro de alerta */
 .alert {
-    padding: 10px; /* Reduce el padding para que el cuadro sea más compacto */
-    background-color: #4CAF50; /* Verde */
+    padding: 10px;
+    background-color: #4CAF50;
     color: white;
     position: fixed;
-    bottom: 28%; /* Posiciona el cuadro en la parte inferior */
-    left: 43%;  /* Mueve el cuadro hacia la derecha */
+    bottom: 28%;
+    left: 43%;
     z-index: 1000;
     border-radius: 5px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     display: flex;
-    align-items: center; /* Centrar el contenido verticalmente */
-    justify-content: space-between; /* Distribuir espacio entre el mensaje y el botón de cerrar */
-    width: 250px; /* Ajusta el ancho del cuadro */
-    height: 50px; /* Ajusta la altura del cuadro */
-    text-align: center; /* Centra el texto dentro del cuadro */
+    align-items: center;
+    justify-content: space-between;
+    width: 250px;
+    height: 50px;
+    text-align: center;
+    transition: all 0.3s ease-in-out; /* Suaviza la transición al cambiar tamaño o posición */
 }
+
+/* Estilo adaptado para pantallas más pequeñas (dispositivos móviles) */
+@media (max-width: 768px) {
+    .alert {
+        bottom: 10%; /* Ajustar la posición para móviles */
+        left: 10%; /* Dejar un margen lateral para que no quede en el borde */
+        width: 80%; /* Aumentar el ancho para ocupar más espacio en pantallas pequeñas */
+        height: auto; /* Deja que la altura se ajuste según el contenido */
+        padding: 15px; /* Incrementa el padding para mejor legibilidad en móviles */
+        font-size: 14px; /* Reduce el tamaño del texto */
+    }
+}
+
+/* Estilo adaptado para pantallas aún más pequeñas (por ejemplo, teléfonos pequeños) */
+@media (max-width: 480px) {
+    .alert {
+        left: 5%; /* Aumentar el margen lateral para pantallas muy pequeñas */
+        width: 90%; /* Ocupa más espacio horizontalmente */
+    }
+}
+
 
 /* Estilo del botón de cerrar */
 .close-btn {
