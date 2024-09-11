@@ -397,7 +397,7 @@ body {
     background-color: #4CAF50;
     color: white;
     position: fixed;
-    bottom: 10%;
+    bottom: 5%;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1000;
