@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Contraseñas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Video de fondo -->
+    <div class="video-background">
+        <video autoplay muted loop>
+            <source src="videobck.mp4" type="video/mp4">
+            Tu navegador no soporta el video.
+        </video>
+    </div>
+
+    <!-- Página Inicial -->
+    <div class="page-initial">
+        <h1>Bienvenido al Generador de Contraseñas</h1>
+        <p>Este generador creará contraseñas con:</p>
+        <ul>
+            <li>Caracteres especiales</li>
+            <li>Letras y números</li>
+            <li>Letras mayúsculas y minúsculas</li>
+            <li>Caracteres especiales</li>
+            <li>Longitud mínima de 8 caracteres</li>
+        </ul>
+        <button class="button-start" id="start-button">Comenzar</button>
+    </div>
+    <!-- Recuadro de aviso en la página principal -->
+<div id="security-info" class="security-info">
+    <p>Las contraseñas generadas no se repiten, el anonimato y la seguridad se mantienen al 100%. Gracias.</p>
+</div>
+
+
+    <!-- Página del Generador -->
+    <div class="page-generator" style="display: none;">
+        <!-- Botón de Home -->
+    <button class="btn" id="home-button">
+        <span class="icon">
+            <svg viewBox="0 0 175 80" width="40" height="40">
+                <rect width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+                <rect y="30" width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+                <rect y="60" width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+            </svg>
+        </span>
+        <span class="text">MENU</span>
+    </button>
+    
+        <button class="button-85" id="generate-button">Generar</button>
+        <button class="button-86" id="password-button" style="display: none;">Contraseña</button>
+        
+        <!-- Sección de puntuaciones -->
+        <div class="score-section">
+            <h2>Puntuaciones de seguridad</h2>
+            <ul id="scores-list"></ul>
+        </div>
+    </div>
+    <div id="alert-box" class="alert" style="display: none;">
+        <span id="close-alert" class="close-btn">&times;</span>
+        <p>Contraseña generada</p>
+    </div>
+    <!-- Mensaje de confirmación -->
+    <div id="copyMessage" class="alert" style="display: none;">
+    <span id="close-copy-alert" class="close-btn">&times;</span>
+    <p>¡Contraseña copiada!</p>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
