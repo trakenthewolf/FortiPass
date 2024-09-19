@@ -353,9 +353,9 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     
     /* Posición fija en el medio superior de la pantalla */
-    position: fixed;
-    top: 200px; /* Ajuste vertical: parte superior */
-    left: 55%; /* Ajuste horizontal: centro de la pantalla */
+    position: absolute;
+    top: -130px; /* Ajuste vertical: parte superior */
+    left: 50%; /* Ajuste horizontal: centro de la pantalla */
     transform: translateX(-50%); /* Centramos completamente el botón */
     
     /* Espacio entre botones si hay más de uno */
@@ -508,9 +508,9 @@ body {
     margin-top: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
       /* Posición fija en el medio superior de la pantalla */
-    position: fixed;
-      top: 180px; /* Ajuste vertical: parte superior */
-      left: 45%; /* Ajuste horizontal: centro de la pantalla */
+    position: absolute;
+      top: 300px; /* Ajuste vertical: parte superior */
+      left: 50%; /* Ajuste horizontal: centro de la pantalla */
       transform: translateX(-50%); /* Centramos completamente el botón */
     
 }
@@ -523,5 +523,4 @@ body {
 .contact-button:active {
     transform: scale(0.95);
 }
-
 
