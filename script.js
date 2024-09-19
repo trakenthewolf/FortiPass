@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const alertBox = document.getElementById('alert-box');
     const copyMessage = document.getElementById('copyMessage'); // Mensaje de contraseña copiada
     const scoresList = document.getElementById('scores-list');
+    const securityInfo = document.getElementById('security-info'); // Mensaje de seguridad
 
     let generatedPassword = '';
     let alertTimeout; // Variable para el temporizador de alerta
@@ -14,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     startButton.addEventListener('click', () => {
         document.querySelector('.page-initial').style.display = 'none';
         document.querySelector('.page-generator').style.display = 'block';
+        securityInfo.style.display = 'none'; // Ocultar mensaje de seguridad al ir a la página generadora
         hideAlerts(); // Ocultar alertas al mostrar la página generadora
     });
 
@@ -42,6 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
     homeButton.addEventListener('click', () => {
         document.querySelector('.page-initial').style.display = 'block';
         document.querySelector('.page-generator').style.display = 'none';
+        securityInfo.style.display = 'block'; // Mostrar mensaje de seguridad al volver al menú principal
         hideAlerts(); // Ocultar alertas al volver al menú principal
     });
 
@@ -101,3 +104,4 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 1000);
     }
 });
+
